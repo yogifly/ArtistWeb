@@ -215,56 +215,108 @@ const LandingPageView1 = () => {
       background: `linear-gradient(to right, ${artistPage.gradientStart}, ${artistPage.gradientEnd})`
     }}>
       {/* Navbar Section */}
-      <nav id="navbar" className="fixed top-0 w-full z-50">
-        <Card className="rounded-none shadow-sm">
-          <CardContent className="max-w-6xl mx-auto px-4 py-4">
-            <div className="flex justify-between items-center">
-              <h2 className="font-semibold text-xl">@{username}</h2>
-              <Tabs>
-                <TabsList className="hidden md:flex">
-                  <TabsTrigger
-                    value="performances"
-                    onClick={() => scrollToSection('performances')}
-                  >
-                    Performances
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="videos"
-                    onClick={() => scrollToSection('videos')}
-                  >
-                    Videos
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="songsSale"
-                    onClick={() => scrollToSection('songsSale')}
-                  >
-                    Songs Sale
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="merchandise"
-                    onClick={() => scrollToSection('merchandise')}
-                  >
-                    Merchandise
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="fanMessages"
-                    onClick={() => scrollToSection('messages')}
-                  >
-                    Messages
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="support"
-                    onClick={() => scrollToSection('support')}
-                  >
-                    Support
-                  </TabsTrigger>
-                </TabsList>
-              </Tabs>
+<nav id="navbar" className="fixed top-0 w-full z-50 bg-white shadow-md">
+  <div className="max-w-6xl mx-auto px-4 py-4">
+    <div className="flex justify-between items-center">
+      <h2 className="font-semibold text-xl">@{username}</h2>
 
-            </div>
-          </CardContent>
-        </Card>
-      </nav>
+      {/* Mobile Toggle Button */}
+      <div className="md:hidden">
+        <button
+          className="text-2xl"
+          onClick={() => document.getElementById('navbar-menu').classList.toggle('hidden')}
+        >
+          &#9776; {/* Hamburger icon */}
+        </button>
+      </div>
+
+      {/* Tabs List - Desktop View */}
+      <div className="hidden md:flex">
+        <div className="flex space-x-4">
+          <button
+            className="text-sm px-4 py-2 hover:bg-gray-200 rounded"
+            onClick={() => scrollToSection('performances')}
+          >
+            Performances
+          </button>
+          <button
+            className="text-sm px-4 py-2 hover:bg-gray-200 rounded"
+            onClick={() => scrollToSection('videos')}
+          >
+            Videos
+          </button>
+          <button
+            className="text-sm px-4 py-2 hover:bg-gray-200 rounded"
+            onClick={() => scrollToSection('songsSale')}
+          >
+            Songs Sale
+          </button>
+          <button
+            className="text-sm px-4 py-2 hover:bg-gray-200 rounded"
+            onClick={() => scrollToSection('merchandise')}
+          >
+            Merchandise
+          </button>
+          <button
+            className="text-sm px-4 py-2 hover:bg-gray-200 rounded"
+            onClick={() => scrollToSection('messages')}
+          >
+            Messages
+          </button>
+          <button
+            className="text-sm px-4 py-2 hover:bg-gray-200 rounded"
+            onClick={() => scrollToSection('support')}
+          >
+            Support
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Mobile View - Hidden by default */}
+  <div id="navbar-menu" className="hidden md:hidden bg-white shadow-lg mt-2 transition-all duration-300 ease-in-out">
+    <div className="flex flex-col space-y-2 px-4 py-2">
+      <button
+        className="text-sm py-2 hover:bg-gray-200 rounded"
+        onClick={() => scrollToSection('performances')}
+      >
+        Performances
+      </button>
+      <button
+        className="text-sm py-2 hover:bg-gray-200 rounded"
+        onClick={() => scrollToSection('videos')}
+      >
+        Videos
+      </button>
+      <button
+        className="text-sm py-2 hover:bg-gray-200 rounded"
+        onClick={() => scrollToSection('songsSale')}
+      >
+        Songs Sale
+      </button>
+      <button
+        className="text-sm py-2 hover:bg-gray-200 rounded"
+        onClick={() => scrollToSection('merchandise')}
+      >
+        Merchandise
+      </button>
+      <button
+        className="text-sm py-2 hover:bg-gray-200 rounded"
+        onClick={() => scrollToSection('messages')}
+      >
+        Messages
+      </button>
+      <button
+        className="text-sm py-2 hover:bg-gray-200 rounded"
+        onClick={() => scrollToSection('support')}
+      >
+        Support
+      </button>
+    </div>
+  </div>
+</nav>
+
 
       {/* Main Content Section */}
       <div className="max-w-6xl mx-auto px-4 py-8 pt-[100px]">
