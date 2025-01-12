@@ -457,19 +457,8 @@ const LandingPageView1 = () => {
                               </p>
                             </div>
                             <button
-                              className="mt-4 w-full px-4 py-2 rounded-lg transition duration-300"
-                              style={{
-                                backgroundColor: artistPage.ButtonColor,
-                                color: artistPage.ButtonTextColor,
-                              }}
-                              onMouseOver={(e) => {
-                                e.currentTarget.style.backgroundColor = artistPage.ButtonHoverColor;
-                                e.currentTarget.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.2)';
-                              }}
-                              onMouseOut={(e) => {
-                                e.currentTarget.style.backgroundColor = artistPage.ButtonColor;
-                                e.currentTarget.style.boxShadow = 'none';
-                              }}
+                              className="mt-6 px-6 py-2 bg-indigo-400 text-white font-semibold rounded-lg hover:bg-indigo-500 transition-colors duration-200 "
+                              
                             >
                               View Songs
                             </button>
