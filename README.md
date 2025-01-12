@@ -8,7 +8,7 @@ This project is a beautifully designed web page to showcase an artist's profile,
 ## 🌐 Live Demo
 
 Experience the project live at the following links:  
-- **Page 1**: [Landing page 1}(https://artist-web-five.vercel.app/landing1)  
+- **Page 1**: [Landing page 1](https://artist-web-five.vercel.app/landing1)  
 - **Page 2**: [Landing page 1](https://artist-web-five.vercel.app/landing2)
 
 ---
