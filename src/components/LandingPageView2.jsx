@@ -603,7 +603,7 @@ const LandingPageView2 = () => {
                 <div className="flex items-center gap-4">
                   {fanMessages.socialLinks && (
                     <>
-                      <p className="text-white font-medium">Connect with me:</p>
+                      
                       <a
                         href={fanMessages.socialLinks.instagram}
                         target="_blank"
