@@ -355,58 +355,57 @@ const LandingPageView2 = () => {
 
 
         {/* Music Videos Section */}
-        <div id="videos" className="mt-8"
-        >        
-          <div
-            className="p-6 w-full mx-auto backdrop-blur-lg rounded-lg shadow-lg mb-8 border-4 border-[#1DB954]"
-            style={{ backgroundColor: "rgb(61, 61, 61, 0.2)" }}
-          >
-            <CardHeader>
-              <CardTitle className="text-[#1DB954] text-4xl font-extrabold font-bold">Music Videos</CardTitle>
-            </CardHeader>
-            <CardContent>
-              {/* Centered Text Above Music Tabs */}
-              <div className="text-center mb-6">
-                <p className="text-white text-2xl font-bold">
-                  Explore the Latest and Trending Music Videos
-                </p>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {musicVideos.map((video) => (
-                  <div
-                    key={video.videoId}
-                    className="flex items-center gap-3 p-4 bg-white/30 rounded-lg shadow-md transition-all hover:shadow-lg hover:bg-white/50 cursor-pointer transform hover:-translate-y-1 border border-[#1DB954]"
-                    onClick={() => window.open(video.redirectURL, '_blank')}
-                  >
-                    {/* Video Thumbnail */}
-                    <div className="w-15 h-16 flex-shrink-0">
-                      <img
-                        src={video.imageURL}
-                        alt={video.title}
-                        className="w-full h-full object-cover rounded-md border border-[#1DB954]"
-                      />
-                    </div>
-
-                    {/* Video Details */}
-                    <div className="flex-grow">
-                      <h3 className="font-semibold text-sm text-black font-bold">{video.title}</h3>
-                      <p className="text-xs text-white font-semibold">{video.description}</p>
-                    </div>
-
-                    {/* Watch Now Button */}
-                    <Button
-                      variant="ghost"
-                      className="flex-shrink-0 px-4 py-2 text-sm text-black border border-[#1DB954] rounded-full transition-all duration-300 hover:bg-[#1DB954] hover:text-black hover:border-[#1DB954] "
-                    >
-                      Watch
-                    </Button>
+        <div id="videos" className="mt-8">
+        <div
+          className="p-6 w-full mx-auto backdrop-blur-lg rounded-lg shadow-lg mb-8 border-4 border-[#1DB954]"
+          style={{ backgroundColor: "rgba(61, 61, 61, 0.2)" }}
+        >
+          <CardHeader>
+            <CardTitle className="text-[#1DB954] text-4xl font-extrabold">Music Videos</CardTitle>
+          </CardHeader>
+          <CardContent>
+            {/* Centered Text Above Music Tabs */}
+            <div className="text-center mb-6">
+              <p className="text-white text-2xl font-bold">
+                Explore the Latest and Trending Music Videos
+              </p>
+            </div>
+            {/* Grid layout with 2 items per row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {musicVideos.map((video) => (
+                <div
+                  key={video.videoId}
+                  className="flex items-center gap-3 p-4 bg-white/30 rounded-lg shadow-md transition-all hover:shadow-lg hover:bg-white/50 cursor-pointer transform hover:-translate-y-1 border border-[#1DB954]"
+                  onClick={() => window.open(video.redirectURL, "_blank")}
+                >
+                  {/* Video Thumbnail */}
+                  <div className="w-15 h-16 flex-shrink-0">
+                    <img
+                      src={video.imageURL}
+                      alt={video.title}
+                      className="w-full h-full object-cover rounded-md border border-[#1DB954]"
+                    />
                   </div>
-                ))}
-              </div>
-            </CardContent>
-          </div>
-        </div>
 
+                  {/* Video Details */}
+                  <div className="flex-grow">
+                    <h3 className="font-semibold text-sm text-black">{video.title}</h3>
+                    <p className="text-xs text-white font-semibold">{video.description}</p>
+                  </div>
+
+                  {/* Spotify-Themed Play Button */}
+                  <button
+                    className="flex items-center justify-center w-10 h-10 text-white bg-[#1DB954] rounded-full shadow-md transition-transform transform hover:scale-110"
+                    aria-label="Play Video"
+                  >
+                    <FaPlay />
+                  </button>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </div>
+      </div>
 
         <ScrollArea>
 
