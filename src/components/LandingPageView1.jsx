@@ -384,8 +384,8 @@ const LandingPageView1 = () => {
             <ScrollArea className="">
 
 
-             {/* Performances Section */}
-            <div id="performances" className="mt-8">
+            {/* Performances Section */}
+            <div id="performances" className="mt-8 px-4 sm:px-6 lg:px-8">
               <div className="p-6 max-w-3xl mx-auto bg-white bg-opacity-30 backdrop-blur-lg rounded-lg shadow-lg mb-8">
                 <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Performances</h2>
 
@@ -410,9 +410,9 @@ const LandingPageView1 = () => {
                     </div>
 
                     <div className="relative z-10 mt-4">
-                    <button className="bg-indigo-400 hover:bg-indigo-00 text-white font-bold py-2 px-4 rounded-full">
-                      Book Now
-                    </button>
+                      <button className="bg-indigo-400 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full">
+                        Book Now
+                      </button>
                     </div>
                   </div>
                 ))}
@@ -420,9 +420,10 @@ const LandingPageView1 = () => {
             </div>
 
 
+
                 {/* Songs sales Section */}
-                <div id="songsSale">
-                  <div className="p-6 max-w-3xl mx-auto bg-white bg-opacity-30 backdrop-blur-lg rounded-lg shadow-lg mb-8">
+                <div id="songsSale" className="mt-8 px-4 sm:px-6 lg:px-8">
+                  <div className="p-6 max-w-full sm:max-w-3xl mx-auto bg-white bg-opacity-30 backdrop-blur-lg rounded-lg shadow-lg mb-8">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Songs for Sale</h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -458,8 +459,7 @@ const LandingPageView1 = () => {
                               </p>
                             </div>
                             <button
-                              className="mt-6 px-6 py-2 bg-indigo-400 text-white font-semibold rounded-lg hover:bg-indigo-500 transition-colors duration-200 "
-                              
+                              className="mt-6 px-6 py-2 bg-indigo-400 text-white font-semibold rounded-lg hover:bg-indigo-500 transition-colors duration-200"
                             >
                               View Songs
                             </button>
@@ -472,8 +472,8 @@ const LandingPageView1 = () => {
 
 
                 {/* Merchandise Section */}
-                <div id="merchandise">
-                  <div className="p-6 max-w-6xl mx-auto bg-white bg-opacity-30 backdrop-blur-lg rounded-lg shadow-lg mb-8">
+                <div id="merchandise" className="mt-8 px-4 sm:px-6 lg:px-8">
+                  <div className="p-6 max-w-full sm:max-w-6xl mx-auto bg-white bg-opacity-30 backdrop-blur-lg rounded-lg shadow-lg mb-8">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Merchandise</h2>
 
                     <div className="space-y-6">
@@ -517,10 +517,11 @@ const LandingPageView1 = () => {
 
 
 
+
               {/* Messages Section */}
               <div id="messages">
                 {fanMessages && (
-                  <div className="p-6 max-w-3xl mx-auto bg-white bg-opacity-30 backdrop-blur-lg rounded-lg shadow-lg mb-8">
+                  <div className="p-6 max-w-full sm:max-w-3xl mx-auto bg-white bg-opacity-30 backdrop-blur-lg rounded-lg shadow-lg mb-8">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Fan Messages</h2>
 
                     <Card className="mb-4">
@@ -535,21 +536,20 @@ const LandingPageView1 = () => {
                         </CardDescription>
                       </CardHeader>
                       <CardContent>
-                        <div className="flex items-center  justify-between">
-                        <Button
-                          className="bg-indigo-400 hover:bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-colors duration-200"
-                          style={{
-                            cursor: 'pointer',
-                          }}
-                        >
-                          Send Message
-                        </Button>
+                        <div className="flex items-center justify-between">
+                          <Button
+                            className="bg-indigo-400 hover:bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-colors duration-200"
+                            style={{
+                              cursor: 'pointer',
+                            }}
+                          >
+                            Send Message
+                          </Button>
 
                           {/* Connect with me section and social links */}
                           <div className="flex items-center gap-4">
                             {fanMessages.socialLinks && (
                               <>
-                                <p className="text-grey font-medium">Connect with me:</p>
                                 <a 
                                   href={fanMessages.socialLinks.instagram} 
                                   target="_blank" 
@@ -575,6 +575,7 @@ const LandingPageView1 = () => {
                   </div>
                 )}
               </div>
+
               
               {/* Support Section */}
               <div id="support">
