@@ -224,62 +224,114 @@ const LandingPageView2 = () => {
     }}
   >
     {/* Navbar Section */}
-    <nav id="navbar" className="fixed top-0 w-full z-50 bg-trans shadow-lg" s>
-    
-                <CardContent className="max-w-6xl mx-auto px-4 py-4">
-                <div className="flex justify-between items-center bg-trans">
-                  <h2 className="font-semibold text-xl">@{username}</h2>
-                  <Tabs>
-                  <TabsList className="hidden md:flex bg-trans">
-                    <TabsTrigger
-                      value="performances"
-                      onClick={() => scrollToSection('performances')}
-                      className="text-white inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-[#1DB954] data-[state=active]:text-black data-[state=active]:shadow-sm"
-                    >
-                      Performances
-                    </TabsTrigger>
-                    <TabsTrigger
-                      value="videos"
-                      onClick={() => scrollToSection('videos')}
-                      className="text-white inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-[#1DB954] data-[state=active]:text-black data-[state=active]:shadow-sm"
-                    >
-                      Videos
-                    </TabsTrigger>
-                    <TabsTrigger
-                      value="songsSale"
-                      onClick={() => scrollToSection('songsSale')}
-                      className="text-white inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-[#1DB954] data-[state=active]:text-black data-[state=active]:shadow-sm"
-                    >
-                      Songs Sale
-                    </TabsTrigger>
-                    <TabsTrigger
-                      value="merchandise"
-                      onClick={() => scrollToSection('merchandise')}
-                      className="text-white inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-[#1DB954] data-[state=active]:text-black data-[state=active]:shadow-sm"
-                    >
-                      Merchandise
-                    </TabsTrigger>
-                    <TabsTrigger
-                      value="fanMessages"
-                      onClick={() => scrollToSection('messages')}
-                      className="text-white inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-[#1DB954] data-[state=active]:text-black data-[state=active]:shadow-sm"
-                    >
-                      Messages
-                    </TabsTrigger>
-                    <TabsTrigger
-                      value="support"
-                      onClick={() => scrollToSection('support')}
-                      className="text-white inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-[#1DB954] data-[state=active]:text-black data-[state=active]:shadow-sm"
-                    >
-                      Support
-                    </TabsTrigger>
-                  </TabsList>
-                </Tabs>
+<nav id="navbar" className="fixed top-0 w-full z-50 bg-transparent shadow-lg">
+  <CardContent className="max-w-6xl mx-auto px-4 py-4">
+    <div className="flex justify-between items-center bg-transparent">
+      <h2 className="font-semibold text-xl text-white">@{username}</h2>
 
-                </div>
-              </CardContent>
-            
-          </nav>
+      {/* Mobile Toggle Button */}
+      <div className="md:hidden">
+        <button
+          className="text-2xl text-white"
+          onClick={() => document.getElementById('navbar-menu').classList.toggle('hidden')}
+        >
+          &#9776; {/* Hamburger Icon */}
+        </button>
+      </div>
+
+      {/* Tabs - Desktop View */}
+      <Tabs className="hidden md:flex">
+        <TabsList className="flex space-x-4 bg-transparent">
+          <TabsTrigger
+            value="performances"
+            onClick={() => scrollToSection('performances')}
+            className="text-white inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 data-[state=active]:bg-[#1DB954] data-[state=active]:text-black data-[state=active]:shadow-sm"
+          >
+            Performances
+          </TabsTrigger>
+          <TabsTrigger
+            value="videos"
+            onClick={() => scrollToSection('videos')}
+            className="text-white inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 data-[state=active]:bg-[#1DB954] data-[state=active]:text-black data-[state=active]:shadow-sm"
+          >
+            Videos
+          </TabsTrigger>
+          <TabsTrigger
+            value="songsSale"
+            onClick={() => scrollToSection('songsSale')}
+            className="text-white inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 data-[state=active]:bg-[#1DB954] data-[state=active]:text-black data-[state=active]:shadow-sm"
+          >
+            Songs Sale
+          </TabsTrigger>
+          <TabsTrigger
+            value="merchandise"
+            onClick={() => scrollToSection('merchandise')}
+            className="text-white inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 data-[state=active]:bg-[#1DB954] data-[state=active]:text-black data-[state=active]:shadow-sm"
+          >
+            Merchandise
+          </TabsTrigger>
+          <TabsTrigger
+            value="fanMessages"
+            onClick={() => scrollToSection('messages')}
+            className="text-white inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 data-[state=active]:bg-[#1DB954] data-[state=active]:text-black data-[state=active]:shadow-sm"
+          >
+            Messages
+          </TabsTrigger>
+          <TabsTrigger
+            value="support"
+            onClick={() => scrollToSection('support')}
+            className="text-white inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 data-[state=active]:bg-[#1DB954] data-[state=active]:text-black data-[state=active]:shadow-sm"
+          >
+            Support
+          </TabsTrigger>
+        </TabsList>
+      </Tabs>
+    </div>
+  </CardContent>
+
+  {/* Mobile View - Hidden by default */}
+  <div id="navbar-menu" className="hidden bg-black text-white transition-all duration-300 ease-in-out">
+    <div className="flex flex-col space-y-2 px-4 py-2">
+      <button
+        className="text-sm py-2 hover:bg-[#1DB954] rounded"
+        onClick={() => scrollToSection('performances')}
+      >
+        Performances
+      </button>
+      <button
+        className="text-sm py-2 hover:bg-[#1DB954] rounded"
+        onClick={() => scrollToSection('videos')}
+      >
+        Videos
+      </button>
+      <button
+        className="text-sm py-2 hover:bg-[#1DB954] rounded"
+        onClick={() => scrollToSection('songsSale')}
+      >
+        Songs Sale
+      </button>
+      <button
+        className="text-sm py-2 hover:bg-[#1DB954] rounded"
+        onClick={() => scrollToSection('merchandise')}
+      >
+        Merchandise
+      </button>
+      <button
+        className="text-sm py-2 hover:bg-[#1DB954] rounded"
+        onClick={() => scrollToSection('messages')}
+      >
+        Messages
+      </button>
+      <button
+        className="text-sm py-2 hover:bg-[#1DB954] rounded"
+        onClick={() => scrollToSection('support')}
+      >
+        Support
+      </button>
+    </div>
+  </div>
+</nav>
+
           
  {/* Main Content Container */}
   <div className="w-full space-y-1">
