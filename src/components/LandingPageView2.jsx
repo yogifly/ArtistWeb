@@ -284,7 +284,7 @@ const LandingPageView2 = () => {
  {/* Main Content Container */}
   <div className="w-full space-y-1">
  {/* Profile Section */}
-<div className="flex flex-col lg:flex-row justify-center lg:justify-start items-center lg:items-start h-screen bg-[url('assets/VishalMishra.png')] bg-cover bg-center z-0">
+<div className="flex flex-col lg:flex-row justify-center lg:justify-start items-center lg:items-start h-screen bg-[url('https://clikrecords.com/wp-content/uploads/2022/09/Vishal-Mishra-2.jpg')] bg-cover bg-center z-0">
   {/* Overlay for fade effect */}
   <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
 
