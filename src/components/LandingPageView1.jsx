@@ -338,46 +338,47 @@ const LandingPageView1 = () => {
 
             {/* Music Videos Section */}
             <div id="videos" className="mt-8">
-              <div className="p-6 max-w-3xl mx-auto bg-white bg-opacity-30 backdrop-blur-lg rounded-lg shadow-lg mb-8">
-                <CardHeader>
-                  <CardTitle className="text-gray-900 text-lg font-bold">Music Videos</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    {musicVideos.map((video) => (
-                      <div
-                        key={video.videoId}
-                        className="flex items-center gap-3 p-4 bg-white/30 rounded-lg shadow-md transition-all hover:shadow-lg hover:bg-white/50 cursor-pointer transform hover:-translate-y-1"
-                        onClick={() => window.open(video.redirectURL, '_blank')}
-                      >
-                        {/* Video Thumbnail */}
-                        <div className="w-15 h-16 flex-shrink-0">
-                          <img
-                            src={video.imageURL}
-                            alt={video.title}
-                            className="w-full h-full object-cover rounded-md border border-gray-300"
-                          />
-                        </div>
-
-                        {/* Video Details */}
-                        <div className="flex-grow">
-                          <h3 className="font-semibold text-sm text-gray-900">{video.title}</h3>
-                          <p className="text-xs text-gray-700">{video.description}</p>
-                        </div>
-
-                        {/* Watch Now Button */}
-                        <Button
-                          variant="ghost"
-                          className="flex-shrink-0 px-4 py-2 text-sm text-indigo-600 border border-indigo-500 rounded-full transition-all duration-300 hover:bg-indigo-600 hover:text-white"
-                        >
-                          Watch Now
-                        </Button>
+            <div className="p-6 max-w-3xl mx-auto bg-white bg-opacity-30 backdrop-blur-lg rounded-lg shadow-lg mb-8">
+              <CardHeader>
+                <CardTitle className="text-gray-900 text-lg font-bold">Music Videos</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  {musicVideos.map((video) => (
+                    <div
+                      key={video.videoId}
+                      className="flex flex-col sm:flex-row items-center gap-3 p-4 bg-white/30 rounded-lg shadow-md transition-all hover:shadow-lg hover:bg-white/50 cursor-pointer transform hover:-translate-y-1"
+                      onClick={() => window.open(video.redirectURL, '_blank')}
+                    >
+                      {/* Video Thumbnail */}
+                      <div className="w-15 h-16 flex-shrink-0">
+                        <img
+                          src={video.imageURL}
+                          alt={video.title}
+                          className="w-full h-full object-cover rounded-md border border-gray-300"
+                        />
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </div>
+
+                      {/* Video Details */}
+                      <div className="flex-grow">
+                        <h3 className="font-semibold text-sm text-gray-900">{video.title}</h3>
+                        <p className="text-xs text-gray-700">{video.description}</p>
+                      </div>
+
+                      {/* Watch Now Button */}
+                      <Button
+                        variant="ghost"
+                        className="flex-shrink-0 px-4 py-2 text-sm text-indigo-600 border border-indigo-500 rounded-full transition-all duration-300 hover:bg-indigo-600 hover:text-white w-full sm:w-auto mt-3 sm:mt-0"
+                      >
+                        Watch Now
+                      </Button>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
             </div>
+          </div>
+
 
             {/* Scrollable Sections */}
             <ScrollArea className="">

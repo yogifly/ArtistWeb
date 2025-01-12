@@ -3,7 +3,7 @@ import React from 'react';
 import { useEffect, useState } from "react";
 // import { useParams } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { FaInstagram, FaTwitter ,FaRegHeart} from 'react-icons/fa';
+import { FaInstagram, FaTwitter ,FaPlay} from 'react-icons/fa';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -355,11 +355,8 @@ const LandingPageView2 = () => {
 
 
         {/* Music Videos Section */}
-        <div
-          id="videos"
-          className="mt-8"
-        >
-          
+        <div id="videos" className="mt-8"
+        >        
           <div
             className="p-6 w-full mx-auto backdrop-blur-lg rounded-lg shadow-lg mb-8 border-4 border-[#1DB954]"
             style={{ backgroundColor: "rgb(61, 61, 61, 0.2)" }}
@@ -399,9 +396,9 @@ const LandingPageView2 = () => {
                     {/* Watch Now Button */}
                     <Button
                       variant="ghost"
-                      className="flex-shrink-0 px-4 py-2 text-sm text-black border border-[#1DB954] rounded-full transition-all duration-300 hover:bg-[#1DB954] hover:text-black hover:border-[#1DB954]"
+                      className="flex-shrink-0 px-4 py-2 text-sm text-black border border-[#1DB954] rounded-full transition-all duration-300 hover:bg-[#1DB954] hover:text-black hover:border-[#1DB954] "
                     >
-                      Watch Now
+                      Watch
                     </Button>
                   </div>
                 ))}
